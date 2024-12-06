@@ -4,8 +4,8 @@ import { Route, Routes, Link } from "react-router-dom";
 function RecoveryPassword() {
     return (
         <>
-            <section className="w-full h-full flex justify-center bg-[url('https://img.freepik.com/free-photo/3d-modern-background-with-abstract-design-flowing-particles_1048-12262.jpg?t=st=1733466097~exp=1733469697~hmac=761d0fef7b9ed454ee8107bbf49dca4b48fced5aac0270579a9539c27f8f5d67&w=996')] bg-cover">
-                <div className="bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
+            <section className="w-full h-full flex justify-center bg-[url('https://img.freepik.com/foto-gratis/fondo-moderno-3d-diseno-abstracto-particulas-que-fluyen_1048-12262.jpg?t=st=1733523795~exp=1733527395~hmac=758e278b5c42a66b1e4311689d1cbeb1c6843582b3d6640b74649fb092efab9f&w=1060')] bg-cover">
+                <div className="mt-40 bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
                     <Link to='/'>
                         <button className="text-left mb-4 focus:outline-none w-full">
                             <svg

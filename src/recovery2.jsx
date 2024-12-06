@@ -7,25 +7,10 @@ const AlertIcon = function () { '<svg xmlns="http://www.w3.org/2000/svg" width="
 function RecoveryPassword2() {
     return (
         <>
-            <section className="w-full h-full flex justify-center bg-[url('https://img.freepik.com/free-photo/3d-modern-background-with-abstract-design-flowing-particles_1048-12262.jpg?t=st=1733466097~exp=1733469697~hmac=761d0fef7b9ed454ee8107bbf49dca4b48fced5aac0270579a9539c27f8f5d67&w=996')] bg-cover">
-                <div className="bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
+            <section className="w-full h-full flex justify-center bg-[url('https://img.freepik.com/foto-gratis/fondo-moderno-3d-diseno-abstracto-particulas-que-fluyen_1048-12262.jpg?t=st=1733523795~exp=1733527395~hmac=758e278b5c42a66b1e4311689d1cbeb1c6843582b3d6640b74649fb092efab9f&w=1060')] bg-cover">
+                <div className="mt-40 bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
                     <Link to='/recoveryPassword'>
-                        <button className="text-left mb-4 focus:outline-none w-full">
-                            <svg
-                                className="w-6 h-6 text-black"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M15 19l-7-7 7-7"
-                                ></path>
-                            </svg>
-                        </button>
+                        <button className="text-left mb-4 focus:outline-none w-full"></button>
                     </Link>
                     <h1 className="text-3xl font-bold mb-4 text-center text-white">Recuperar contraseña</h1>
                     <p className="text-center text-white  mb-4">
@@ -34,22 +19,21 @@ function RecoveryPassword2() {
 
                     <form>
                         <div className="mb-4">
-                        
                             <input
+                                placeholder="Email"
                                 type="email"
                                 id="email"
                                 className="mt-1 block w-full px-3 py-2 border border-gray-300 shadow-sm focus:outline-none sm:text-sm text-center bg-slate-200 rounded-lg"
                             />
                         </div>
                         <div className="flex justify-center items-center text py-2 h-12 border rounded-lg border-green-500">
-                            <img className="h-8 text-color mx-4" src="/public/alert-icon.png" alt="" />
-                            <p className="text-green-500" >Continuar</p>
+                            <p className="text-green-500" >Reenviar código</p>
                         </div>
                             <button
                                 type="submit"
                                 className="rounded-lg font-black my-4 bg-green-500 text-white py-3 px-4 w-full hover:bg-green-800 text-lg mb-2"
                             >
-                                Reenviar código
+                                Continuar
                             </button>
                     </form>
                 </div>
