@@ -6,12 +6,11 @@ const SignUpExample = () => {
 
     return (
         <>
-            <section className='flex items-center h-screen w-screen fixed z-10'>
-                <section className="bg-white w-full h-full flex justify-center bg-[url('https://img.freepik.com/foto-gratis/fondo-moderno-3d-diseno-abstracto-particulas-que-fluyen_1048-12262.jpg?t=st=1733523795~exp=1733527395~hmac=758e278b5c42a66b1e4311689d1cbeb1c6843582b3d6640b74649fb092efab9f&w=1060')] bg-cover">
+            <section className="flex h-screen w-screen fixed z-10 ">
+                <section className="w-full h-full flex justify-center">
                     <section className="flex flex-col w-50 p-12">
-                        
-                        
-                        <form className="mt-24  bg-black/40 flex flex-col p-4">
+            
+                    <form className="mt-24 w-50 bg-black/40 flex flex-col p-4">
                         <h1 className='text-2xl font-bold text-white'>Registrarse</h1>
                             <div className="mt-4 flex flex-col self-center ">
                                 <input className="w-96 bg-zinc-200 p-2 rounded-lg" type="text" name="name" id="name" placeholder='Usuario' />
@@ -35,10 +34,13 @@ const SignUpExample = () => {
                         </section>
                         </form>
                         
-
+                        
+                        
+                        
                     </section>
                 </section>
             </section>
+            
         </>
     )
 }

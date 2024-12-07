@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-
 import LoginExample from './loginExample';
 import SignUpExample from './singUpExample';
 import Recovery from './recovery';
@@ -14,7 +13,7 @@ function App() {
   console.log(location)
 
   return (
-    <div className="bg-gradient-to-br m-0 from-sky-200 to-white-200 w-screen h-screen">
+    <div className='contenedor'>
       <Routes location={background || location}>
         <Route index element={<LoginExample/>} />
         <Route path='/LoginExample' element={<LoginExample />} />

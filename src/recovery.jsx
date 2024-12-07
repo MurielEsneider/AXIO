@@ -4,12 +4,12 @@ import { Route, Routes, Link } from "react-router-dom";
 function RecoveryPassword() {
     return (
         <>
-            <section className="w-full h-full flex justify-center bg-[url('https://img.freepik.com/foto-gratis/fondo-moderno-3d-diseno-abstracto-particulas-que-fluyen_1048-12262.jpg?t=st=1733523795~exp=1733527395~hmac=758e278b5c42a66b1e4311689d1cbeb1c6843582b3d6640b74649fb092efab9f&w=1060')] bg-cover">
+            <section className="w-full h-full flex justify-center">
                 <div className="mt-40 bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
                     <Link to='/'>
-                        <button className="text-left mb-4 focus:outline-none w-full">
+                        <button className="text-left focus:outline-none w-full">
                             <svg
-                                className="w-6 h-6 text-black"
+                                className="w-6 h-6 text-white"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
