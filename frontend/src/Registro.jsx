@@ -20,7 +20,7 @@ const SignUpExample = () => {
                 correo,
                 contraseña,
             });
-            navigate('/loginExample'); // Asegúrate de que esta ruta sea válida.
+            navigate('/login'); 
         } catch (error) {
             console.error('Error al registrarse: ', error);
             setError('Hubo un problema al registrar tu cuenta. Intenta nuevamente.');
@@ -66,7 +66,7 @@ const SignUpExample = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <div className="mt-4 flex flex-col self-center">
+                        <div className="mt-4 mb-4 flex flex-col self-center">
                             <input
                                 className="w-96 mb-2 bg-zinc-200 p-2 rounded-lg"
                                 type="password"
@@ -85,7 +85,7 @@ const SignUpExample = () => {
                         </div>
                         <section className="flex text-sm justify-center gap-36 mb-4 text-white">
                             <p className="mt-4">¿Ya tienes una cuenta?</p>
-                            <Link className="text-green-500 mt-4" to="/loginExample">
+                            <Link className="text-green-500 mt-4" to="/login">
                                 Inicia sesión
                             </Link>
                         </section>

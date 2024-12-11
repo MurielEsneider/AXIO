@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import PrimaryButton from "./components/PrimaryButton";
+import Button1 from './components/Button1'
 import axios from "axios";
 
 const LoginExample = () => {
     const [formData, setFormData] = useState({ correo: "", contraseña: "" });
     const [mensaje, setMensaje] = useState("");
-    const navigate = useNavigate(); // Instancia del enrutador
+    const navigate = useNavigate(); 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,10 +20,9 @@ const LoginExample = () => {
             setMensaje("Inicio de sesión exitoso");
             localStorage.setItem("token", response.data.token);
 
-            // Redirigir al usuario después de un inicio de sesión exitoso
             setTimeout(() => {
-                navigate("/Home"); // Redirige a la página principal o la ruta deseada
-            }, 2000);
+                navigate("/Home"); 
+            }, 1000);
         } catch (error) {
             setMensaje(error.response?.data?.error || "Error al iniciar sesión");
         }
@@ -63,12 +62,12 @@ const LoginExample = () => {
                                 />
                             </article>
                             <article>
-                                <PrimaryButton clases="w-96" text="Iniciar sesión"/>
+                                <Button1  clases="w-96" text="Iniciar sesión"/>
                             </article>
-                            <Link className="text-right text-green-500 text-sm self-center mt-4 mb-4" to="/RecoveryPassword">¿Olvidaste tu contraseña?</Link>
+                            <Link className="text-right text-green-500 text-sm self-center mt-4 mb-4" to="/Recuperar">¿Olvidaste tu contraseña?</Link>
                             <section className="flex text-sm justify-center mt-2 mb-4">
                                 <p className="text-white mr-36">¿No tienes una cuenta?</p>
-                                <Link className="text-green-500" to="/SignUpExample">Regístrate</Link>
+                                <Link className="text-green-500" to="/Registro">Regístrate</Link>
                             </section>
                         </form>
                     </section>

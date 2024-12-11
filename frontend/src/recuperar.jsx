@@ -16,7 +16,7 @@ function RecoveryPassword() {
             const data = await response.json();
             if (response.ok) {
                 alert('Correo de recuperación enviado');
-                navigate('/RecoveryPassword2'); // Redirigir a la siguiente página
+                navigate('/Codigo'); // Redirigir a la siguiente página
             } else {
                 alert(data.error || 'Ocurrió un error al enviar el correo');
             }

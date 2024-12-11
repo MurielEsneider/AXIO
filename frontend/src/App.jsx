@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import LoginExample from './Login';
-import SignUpExample from './singUpExample';
-import Recovery from './recovery';
-import Recovery2 from './recovery2'
-import Home from './page';
+import Login from './Login';
+import Registro from './Registro';
+import Recuperar from './recuperar';
+import Codigo from './codigo'
+import Home from './Home';
 import Users from './users';
 
 function App() {
@@ -16,11 +16,11 @@ function App() {
   return (
     <div className='contenedor'>
       <Routes location={background || location}>
-        <Route index element={<LoginExample/>} />
-        <Route path='/LoginExample' element={<LoginExample />} />
-        <Route path='/SignUpExample' element={<SignUpExample />} />
-        <Route path='/RecoveryPassword' element={<Recovery />} />
-        <Route path='/RecoveryPassword2' element={<Recovery2 />} />
+        <Route index element={<Login/>} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Registro' element={<Registro />} />
+        <Route path='/Recuperar' element={<Recuperar />} />
+        <Route path='/Codigo' element={<Codigo />} />
         <Route path='/Home' element={<Home />} />
         <Route path='/Users' element={<Users/>} />
       </Routes>

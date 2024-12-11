@@ -7,7 +7,7 @@ function RecoveryPassword2() {
         <>
             <section className="w-full h-full flex justify-center">
                 <div className="mt-40 bg-black/40 p-8 rounded-lg shadow-lg max-w-md w-full fixed justify-center items-center">
-                <Link to='/RecoveryPassword'>
+                <Link to='/Recuperar'>
                         <button className="text-left  focus:outline-none w-full">
                             <svg
                                 className="w-6 h-6 text-white"

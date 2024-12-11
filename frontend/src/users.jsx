@@ -14,7 +14,7 @@ export default function Users() {
       const token = localStorage.getItem("token"); // Obtener el token del almacenamiento local
       const response = await axios.get("http://localhost:4000/api/users", {
         headers: {
-          Authorization: `Bearer ${token}`, // Enviar el token en los headers
+          Authorization: `Bearer ${token}`, 
         },
       });
 
@@ -36,7 +36,7 @@ export default function Users() {
     }
   };
 
-  // Función para eliminar un usuario
+  // Eliminar un usuario
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
@@ -45,7 +45,7 @@ export default function Users() {
           Authorization: `Bearer ${token}`,
         },
       });
-      setUsers(users.filter((user) => user._id !== id)); // Eliminar usuario del estado
+      setUsers(users.filter((user) => user._id !== id)); 
     } catch (error) {
       console.error("Error al eliminar usuario:", error.message);
       setError(
@@ -56,13 +56,13 @@ export default function Users() {
     }
   };
 
-  // Función para iniciar la edición de un usuario
+  // Edición de un usuario
   const startEdit = (user) => {
     setEditingUser(user);
-    setNewName(user.nombre); // Prellenar con el nombre actual
+    setNewName(user.nombre); //actualizar con nombre actual
   };
 
-  // Función para guardar los cambios de edición
+  // Guardar los cambios de edición
   const handleEdit = async () => {
     if (!editingUser) return;
 
@@ -104,10 +104,10 @@ export default function Users() {
   }
 
   return (
-    <div className="relative overflow-x-auto shadow-xl rounded-lg dark:bg-zinc-800">
-      <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-gray-100 dark:bg-zinc-900 rounded-t-lg">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-white">
-          Lista de Usuarios
+    <div className="relative overflow-x-auto shadow-xl rounded-sm dark:bg-zinc-800">
+      <div className="m-8 flex-column flex-wrap md:flex-row space-y-4 md:space-y-0  rounded-t-lg">
+        <h2 className="text-2xl flex items-center justify-center font-semibold text-center text-gray-800 dark:text-white">
+          USUARIOS REGISTRADOS
         </h2>
       </div>
 
@@ -135,14 +135,14 @@ export default function Users() {
             users.map((user) => (
               <tr
                 key={user._id}
-                className="bg-zinc-500 border-b dark:bg-zinc-900 dark:border-gray-700 hover:bg-gray-600 dark:hover:bg-zinc-800 transition-colors duration-200"
+                className="bg-zinc-500 border-b dark:bg-zinc-800 dark:border-gray-700 dark:hover:bg-zinc-900 transition-colors duration-200"
               >
                 <td className="px-6 py-4">{user.nombre}</td>
                 <td className="px-6 py-4">{user.correo}</td>
                 <td className="px-6 py-4">
                   <button
                     onClick={() => startEdit(user)}
-                    className="relative px-4 py-2 font-semibold text-black bg-green-600 rounded-lg shadow-md group transition-transform duration-300 ease-in-out hover:translate-y-1 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-800"
+                    className="relative px-4 py-2 font-semibold text-black bg-green-600 rounded-sm shadow-md group transition-transform duration-300 ease-in-out hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-800"
                   >
                     Editar
                   </button>
@@ -150,7 +150,7 @@ export default function Users() {
                 <td className="px-6 py-4">
                   <button
                     onClick={() => handleDelete(user._id)}
-                    className="relative px-4 py-2 font-semibold text-black bg-red-600 rounded-lg shadow-md group transition-transform duration-300 ease-in-out hover:translate-y-1 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="relative px-4 py-2 font-semibold text-black bg-white rounded-sm shadow-md group transition-transform duration-300 ease-in-out hover:bg-black focus:outline-none focus:ring-2 hover:text-white"
                   >
                     Eliminar
                   </button>
@@ -167,10 +167,10 @@ export default function Users() {
         </tbody>
       </table>
 
-      {/* Modal de edición */}
+      {/* Modal */}
       {editingUser && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-zinc-800 p-4 rounded-lg shadow-lg">
+          <div className="bg-zinc-800 p-4 rounded-sm shadow-lg">
             <h3 className="text-lg font-semibold mb-4">Editar Usuario</h3>
             <input
               type="text"
