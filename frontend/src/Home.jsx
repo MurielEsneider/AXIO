@@ -41,7 +41,7 @@ export default function Home() {
               src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f5f9b6c8-b7e9-4bc6-8aa5-4cecac07d1e5/ddenu54-abfc0af7-1ae0-47ca-a445-efea7c1ca689.png/v1/fill/w_894,h_894/halo_6_john_117_logo__gamer_profile_picture__by_unscjohnii_ddenu54-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2Y1ZjliNmM4LWI3ZTktNGJjNi04YWE1LTRjZWNhYzA3ZDFlNVwvZGRlbnU1NC1hYmZjMGFmNy0xYWUwLTQ3Y2EtYTQ0NS1lZmVhN2MxY2E2ODkucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.YigaQzSLci79yFprh2_AJwy2hhFL6K0GmAx1xGDgleM"
               className="h-20"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
               Admin117
             </span>
           </a>

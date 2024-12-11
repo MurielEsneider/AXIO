@@ -8,10 +8,10 @@ export default function Users() {
   const [editingUser, setEditingUser] = useState(null); // Usuario que se está editando
   const [newName, setNewName] = useState(""); // Nuevo nombre para edición
 
-  // Función para cargar los usuarios desde el backend
+  // Cargar los usuarios desde el backend
   const fetchUsers = async () => {
     try {
-      const token = localStorage.getItem("token"); // Obtener el token del almacenamiento local
+      const token = localStorage.getItem("token"); // Obtener el token
       const response = await axios.get("http://localhost:4000/api/users", {
         headers: {
           Authorization: `Bearer ${token}`, 
@@ -104,17 +104,17 @@ export default function Users() {
   }
 
   return (
-    <div className="relative overflow-x-auto shadow-xl rounded-sm dark:bg-zinc-800">
+    <div className="relative overflow-x-auto rounded-sm bg-black">
       <div className="m-8 flex-column flex-wrap md:flex-row space-y-4 md:space-y-0  rounded-t-lg">
-        <h2 className="text-2xl flex items-center justify-center font-semibold text-center text-gray-800 dark:text-white">
+        <h2 className="text-2xl flex items-center justify-center font-semibold text-center  text-white">
           USUARIOS REGISTRADOS
         </h2>
       </div>
 
       {error && <p className="text-center text-red-500 font-semibold">{error}</p>}
 
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-blue-500 dark:bg-zinc-700 dark:text-gray-400">
+      <table className="w-full text-sm text-left rtl:text-right  text-white">
+        <thead className="text-xs uppercase border-b border-t  border-white bg-gray-700 dark:bg-zinc-700">
           <tr>
             <th scope="col" className="px-6 py-3 text-white">
               Nombre
@@ -135,7 +135,7 @@ export default function Users() {
             users.map((user) => (
               <tr
                 key={user._id}
-                className="bg-zinc-500 border-b dark:bg-zinc-800 dark:border-gray-700 dark:hover:bg-zinc-900 transition-colors duration-200"
+                className=" border-b  dark:hover:bg-zinc-900 transition-colors duration-200"
               >
                 <td className="px-6 py-4">{user.nombre}</td>
                 <td className="px-6 py-4">{user.correo}</td>
@@ -170,8 +170,8 @@ export default function Users() {
       {/* Modal */}
       {editingUser && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-zinc-800 p-4 rounded-sm shadow-lg">
-            <h3 className="text-lg font-semibold mb-4">Editar Usuario</h3>
+          <div className="bg-black p-4 rounded-sm shadow-lg">
+            <h3 className="text-lg font-semibold mb-4 text-white ">EDITAR USUARIO</h3>
             <input
               type="text"
               value={newName}
@@ -180,7 +180,7 @@ export default function Users() {
             />
             <button
               onClick={handleEdit}
-              className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
+              className="px-4 py-2 bg-green-500 text-white rounded mr-2"
             >
               Guardar
             </button>
