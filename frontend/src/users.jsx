@@ -12,7 +12,7 @@ export default function Users() {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem("token"); // Obtener el token del almacenamiento local
-      const response = await axios.get("http://localhost:5000/api/users", {
+      const response = await axios.get("http://localhost:4000/api/users", {
         headers: {
           Authorization: `Bearer ${token}`, // Enviar el token en los headers
         },
@@ -40,7 +40,7 @@ export default function Users() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/users/${id}`, {
+      await axios.delete(`http://localhost:4000/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -69,7 +69,7 @@ export default function Users() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/api/users/${editingUser._id}`,
+        `http://localhost:4000/api/users/${editingUser._id}`,
         { nombre: newName },
         {
           headers: {
