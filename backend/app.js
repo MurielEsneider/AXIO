@@ -150,7 +150,7 @@ app.post('/api/recover-password', async (req, res) => {
       to: correo,
       subject: 'Recuperación de contraseña',
       text: `Para restablecer tu contraseña, haz clic en el siguiente enlace: 
-http://localhost:3000/reset-password/${token}`,
+      http://localhost:5000/reset-password/${token}`,
 
     };
 
